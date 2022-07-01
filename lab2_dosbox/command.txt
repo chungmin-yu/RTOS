@@ -1,0 +1,4 @@
+mount c \ucos2
+c:
+GOTOLAB
+maketest

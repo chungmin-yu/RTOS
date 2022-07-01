@@ -1,0 +1,21 @@
+    0 Complete 0   3
+    0 Complete 3   4
+    0 Complete 4   5
+    2    lock  R1   (Prio=5 changes to=1)
+    9  unlock  R1   (Prio=1 changes to=5)
+    9 Complete 5   3
+   11    lock  R1   (Prio=3 changes to=1)
+   13    lock  R2   (Prio=1 changes to=1)
+   15  unlock  R2   (Prio=1 changes to=1)
+   15  unlock  R1   (Prio=1 changes to=3)
+   15 Complete 3   4
+   17    lock  R2   (Prio=4 changes to=2)
+   21  unlock  R2   (Prio=2 changes to=4)
+   21 Complete 4   12
+  198 Preempt  12   11
+  198 Complete 11   12
+  200 Preempt  12   0
+  202 Complete 0   12
+  398 Preempt  12   11
+  398 Complete 11   12
+  402 Preempt  12   0
