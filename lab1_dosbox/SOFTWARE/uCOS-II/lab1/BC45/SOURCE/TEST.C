@@ -285,7 +285,7 @@ void Task (void *pdata)
         }
         end = OSTimeGet();
         if (end > start+OSTCBCur->period){
-            printf("time:%d task:%d exceed deadline\n", start+OSTCBCur->period, OSTCBCur->OSTCBPrio);
+            printf("time:%d task%d exceed deadline\n", start+OSTCBCur->period, OSTCBCur->OSTCBPrio);
         }
         toDelay = (OSTCBCur->period) - (end-start);
         start = start + (OSTCBCur->period);
