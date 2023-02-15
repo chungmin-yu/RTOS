@@ -186,6 +186,7 @@ void  OSIntExit (void)
             OSPrioHighRdy = (INT8U)((OSIntExitY << 3) + OSUnMapTbl[OSRdyTbl[OSIntExitY]]);
             if (OSPrioHighRdy != OSPrioCur) {              /* No Ctx Sw if current task is highest rdy */
                 if (CtxSwMessageTop < CtxSwMessageSize) {
+                    if(TimeStart)
                     sprintf(CtxSwMessage[CtxSwMessageTop++],"%5d Preempt  %d   %d\n", (int)OSTime, (int)OSPrioCur, (int)OSPrioHighRdy);
                 }
                 OSTCBHighRdy  = OSTCBPrioTbl[OSPrioHighRdy];
