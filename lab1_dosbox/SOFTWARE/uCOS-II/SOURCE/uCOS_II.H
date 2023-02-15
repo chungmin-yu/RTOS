@@ -1155,3 +1155,4 @@ void          OSTickISR(void);
 extern char CtxSwMessage[CtxSwMessageSize][50];
 extern int CtxSwMessageTop;
 extern OS_EVENT *printCtxSwMbox;
+extern int TimeStart;
