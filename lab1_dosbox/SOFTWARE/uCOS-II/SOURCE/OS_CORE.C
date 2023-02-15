@@ -887,6 +887,7 @@ void  OS_Sched (void)
         OSPrioHighRdy = (INT8U)((y << 3) + OSUnMapTbl[OSRdyTbl[y]]);
         if (OSPrioHighRdy != OSPrioCur) {              /* No Ctx Sw if current task is highest rdy     */
             if (CtxSwMessageTop < CtxSwMessageSize) {
+                if(TimeStart)
                 sprintf(CtxSwMessage[CtxSwMessageTop++],"%5d Complete %d   %d\n", (int)OSTime, (int)OSPrioCur, (int)OSPrioHighRdy);
             }
             OSTCBHighRdy = OSTCBPrioTbl[OSPrioHighRdy];
