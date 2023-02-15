@@ -223,6 +223,8 @@ static  void  TaskStartCreateTasks (void)
     TaskData[0].period = 3;
     TaskData[1].exeTime = 3;
     TaskData[1].period = 6;
+    //TaskData[2].exeTime = 4;
+    //TaskData[2].period = 9;
 
     //for (i = 0; i < N_TASKS; i++) {                        /* Create N_TASKS identical tasks           */
     //    TaskData[i] = '0' + i;                             /* Each task will display its own letter    */
@@ -283,7 +285,7 @@ void Task (void *pdata)
         }
         end = OSTimeGet();
         if (end > start+OSTCBCur->period){
-            printf("time:%d task:%d exceed deadline\n", end, OSTCBCur->OSTCBPrio);
+            printf("time:%d task:%d exceed deadline\n", start+OSTCBCur->period, OSTCBCur->OSTCBPrio);
         }
         toDelay = (OSTCBCur->period) - (end-start);
         start = start + (OSTCBCur->period);
