@@ -33,6 +33,7 @@ struct period {
 
 char CtxSwMessage[CtxSwMessageSize][50];
 int CtxSwMessageTop = 0;
+int TimeStart = 0;
 OS_EVENT     *PrintCtxSwMbox;                         /* Message box for tasks                         */
 
 OS_STK        TaskStk[N_TASKS][TASK_STK_SIZE];        /* Tasks stacks                                  */
@@ -105,6 +106,7 @@ void  TaskStart (void *pdata)
 
     TaskStartCreateTasks();                                /* Create all the application tasks         */
 	OSTimeSet(0);
+	TimeStart = 1;
     for (;;) {
         //TaskStartDisp();                                  /* Update the display                       */
         PrintCtxSwMessage();
