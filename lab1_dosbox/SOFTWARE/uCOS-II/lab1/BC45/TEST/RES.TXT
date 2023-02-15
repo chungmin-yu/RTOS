@@ -1,6 +1,3 @@
-    0 Complete 0   11
-    0 Complete 11   12
-    2 Complete 0   12
     0 Complete 0   1
     1 Complete 1   2
     3 Preempt  2   1
@@ -169,3 +166,10 @@
   198 Preempt  12   1
   199 Complete 1   2
   200 Preempt  2   0
+time:204 task1 exceed deadline
+time:204 task2 exceed deadline
+  215 Complete 0   1
+  216 Complete 1   2
+  218 Complete 2   11
+  218 Complete 11   12
+  415 Preempt  12   0
