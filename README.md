@@ -1,10 +1,12 @@
 # RTOS
 
-compile & run:
-1.goToSource
-2.clean.bat
-3.maketest.bat
-4.test.exe
+compile & run:  
+1.goToSource  
+2.clean.bat  
+3.maketest.bat  
+4.test.exe  
+
+_________________________________________________________________________________
 
 lab1 修改的file  
 test.C  
@@ -25,3 +27,5 @@ ________________________________________________________________________________
 lab3 修改的file  
 test.C  
 OS_MUTEX.C 的 OSMutexPend , OSMutexPost  
+
+_________________________________________________________________________________
