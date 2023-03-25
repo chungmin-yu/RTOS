@@ -8,14 +8,14 @@ compile & run:
 
 _________________________________________________________________________________
 
-lab1 修改的file  
+lab1 (RM Scheduler)修改的file  
 test.C  
 os_core.c :osintexit ,os_sched,osstart,ostimetick  
 uCos.H :最下面的define,os_tcb  
 
 _________________________________________________________________________________
 
-lab2 修改的file  
+lab2 (EDF Scheduler)修改的file  
 test.C  
 os_task.c 的ostaskcreate 把os_sched()註解   
 (因為在pcb裡面加deadline -> 所以在taskcreate的時候deadline還沒有初始化,此時呼叫os_sched()會選錯對象)    
@@ -24,7 +24,7 @@ uCos.H 最下面的define,os_tcb
 
 _________________________________________________________________________________
 
-lab3 修改的file  
+lab3 (Ceiling Priority Protocol + RM Scheduler)修改的file  
 test.C  
 OS_MUTEX.C 的 OSMutexPend , OSMutexPost  
 
